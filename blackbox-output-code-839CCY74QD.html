@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Era Masterpieces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .compositions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .composition-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .composition-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: white;
+            position: relative;
+        }
+
+        .card-image::before {
+            content: '♪';
+            font-size: 3em;
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .composer {
+            font-size: 1.1em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .year {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .listen-btn {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .listen-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+
+        .era-info {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .compositions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Romantic Era Masterpieces</h1>
+            <p class="subtitle">The Golden Age of Emotion in Music (1800-1900)</p>
+        </header>
+
+        <div class="intro">
+            <h2 style="color: #2c3e50; margin-bottom: 20px;">🌹 Welcome to the Romantic Era 🌹</h2>
+            <p>The Romantic era was a time of intense emotion, individual expression, and technical virtuosity. Composers broke free from classical forms to explore nature, love, nationalism, and the supernatural through sweeping melodies and dramatic orchestration.</p>
+        </div>
+
+        <div class="compositions-grid">
+            <div class="composition-card">
+                <div class="card-image" style="background: linear-gradient(45deg, #667eea, #764ba2);"></div>
+                <div class="card-content">
+                    <div class="composer">Ludwig van Beethoven</div>
+                    <div class="title">Symphony No. 9 "Choral"</div>
+                    <div class="year">1824</div>
+                    <div class="description">The triumphant finale "Ode to Joy" revolutionized symphonic form, incorporating voices and creating one of the most recognized melodies in history.</div>
+                    <a href="https://www.youtube.com/watch?v=R7BT5DE6b4g" target="_blank" class="listen-btn">🎵 Listen on YouTube</a>
+                </div>
+            </div>
+
+            <div class="composition-card">
+                <div class="card-image" style="background: linear-gradient(45deg, #f093fb, #f5576c);"></div>
+                <div class="card-content">
+                    <div class="composer">Frédéric Chopin</div>
+                    <div class="title">Nocturne in E-flat Major, Op. 9 No. 2</div>
+                    <div class="year">1832</div>
+                    <div class="description">The quintessential Romantic piano piece, known for its singing melody and delicate ornamentation that captures the Polish composer's poetic soul.</div>
+                    <a href="https://www.youtube.com/watch?v=UrtkEhoZLRw" target="_blank" class="listen-btn">🎵 Listen on YouTube</a>
+                </div>
+            </div>
+
+            <div class="composition-card">
+                <div class="card-image" style="background: linear-gradient(45deg, #4facfe, #00f2fe);"></div>
+                <div class="card-content">
+                    <div class="composer">Franz Liszt</div>
+                    <div class="title">Hungarian Rhapsody No. 2</div>
+                    <div class="year">1847</div>
+                    <div class="description">A fiery display of pianistic virtuosity showcasing Liszt's revolutionary technique and Hungarian folk influences.</div>
+                    <a href="https://www.youtube.com/watch?v=T8ddOWy3Meo" target="_blank" class="listen-btn">🎵 Listen on YouTube</a>
+                </div>
+            </div>
+
+            <div class="composition-card">
+                <div class="card-image" style="background: linear-gradient(45deg, #43e97b, #38f9d7);"></div>
+                <div class="card-content">
+                    <div class="composer">Pyotr Ilyich Tchaikovsky</div>
+                    <div class="title">Swan Lake Suite</div>
+                    <div class="year">1876</div>
+                    <div class="description">The ballet that defined Russian Romanticism, with its famous "Swan Theme" and dramatic emotional contrasts.</div>
+                    <a href="https://www.youtube.com/watch?v=p6eQcp_Yo1U" target="_blank" class="listen-btn">🎵 Listen on YouTube</a>
+                </div>
+            </div>
+
+            <div class="composition-card">
+                <div class="card-image" style="background: linear-gradient(45deg, #fa709a, #fee140);"></div>
+                <div class="card-content">
+                    <div class="composer">Richard Wagner</div>
+                    <div class="title">Ride of the Valkyries</div>
+                    <div class="year">1870</div>
+                    <div class="description">The thunderous prelude from "Die Walküre" exemplifies Wagner's concept of Gesamtkunstwerk and leitmotif technique.</div>
+                    <a href="https://www.youtube.com/watch?v=fWgvRDh0S5s" target="_blank" class="listen-btn">🎵 Listen on YouTube</a>
+                </div>
+            </div>
+
+            <div class="composition-card">
+                <div class="card-image" style="background: linear-gradient(45deg, #a8edea, #fed6e3);"></div>
+                <div class="card-content">
+                    <div class="composer">Johannes Brahms</div>
+                    <div class="title">Hungarian Dance No. 5</div>
+                    <div class="year">1869</div>
+                    <div class="description">Brahms' passionate tribute to gypsy music, blending his classical rigor with Romantic fire.</div>
+                    <a href="https://www.youtube.com/watch?v=qqM34GyaMxA" target="_blank" class="listen-btn">🎵 Listen on YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="era-info">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">🎼 Romantic Era Highlights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 10px;">Key Characteristics</h3>
+                    <ul style="color: #555; line-height: 1.8;">
+                        <li>Emotional expression</li>
+                        <li>Program music</li>
+                        <li>Expanded orchestration</li>
+                        <li>Nationalism</li>
+                        <li>Virtuosic display</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 10px;">Major Composers</h3>
+                    <ul style="color: #555; line-height: 1.8;">
+                        <li>Beethoven</li>
+                        <li>Chopin</li>
+                        <li>Liszt</li>
+                        <li>Wagner</li>
+                        <li>Tchaikovsky</li>
+                        <li>Brahms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
